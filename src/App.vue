@@ -20,10 +20,21 @@ import TheFooter from './components/TheFooter.vue'
 </template>
 
 <style>
+/* Colors of the whole app */
+:root {
+  --main-color: #357abd;           /* buttons and accents */
+  --block-color: #cfe6f7;        /* header, footer, side columns, post cards */
+  --page-color: #f3f9fd;             /* background of the page */
+  --text-color: black;             /* normal text */
+  --button-text-color: white;  /* text on blue buttons */
+}
+
 /* Global styles for the whole app */
 body {
   margin: 0;
   font-family: monospace;
+  background-color: var(--page-color);
+  color: var(--text-color);
 }
 
 /* The app is as tall as the screen, so the footer stays at the bottom */

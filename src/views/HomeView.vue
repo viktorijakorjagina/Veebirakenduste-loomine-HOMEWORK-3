@@ -20,9 +20,9 @@
   padding: 20px;
 }
 
-/* Grey columns on the left and on the right */
+/* Columns on the left and on the right */
 .sidebar {
-  background-color: #bbb;
+  background-color: var(--block-color);
   width: 150px;
   border-radius: 12px;
 }
@@ -32,7 +32,7 @@
   width: 350px;
 }
 
-/* On small screens (phones) we hide the grey columns */
+/* On small screens (phones) we hide the side columns */
 @media (max-width: 700px) {
   .sidebar {
     display: none;

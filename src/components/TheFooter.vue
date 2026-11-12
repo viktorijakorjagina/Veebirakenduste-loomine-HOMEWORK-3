@@ -8,9 +8,9 @@
 </template>
 
 <style scoped>
-/* Grey box at the bottom of the page */
+/* Box at the bottom of the page */
 .site-footer {
-  background-color: #bbb;
+  background-color: var(--block-color);
   text-align: center;
   padding: 15px;
   border-radius: 12px 12px 0 0;
