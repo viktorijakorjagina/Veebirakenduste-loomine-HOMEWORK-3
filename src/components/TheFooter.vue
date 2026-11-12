@@ -1,11 +1,14 @@
 <template>
   <footer class="site-footer">
+
+    <!-- Basic footer information: copyright and authors -->
     <p>&copy; 2026 PostIt. All rights reserved.</p>
     <p>Made by Viktorija Korjagina, Maria Elisa Vassiljeva, Milena Nikishina</p>
   </footer>
 </template>
 
 <style scoped>
+/* Grey box at the bottom of the page */
 .site-footer {
   background-color: #bbb;
   text-align: center;
