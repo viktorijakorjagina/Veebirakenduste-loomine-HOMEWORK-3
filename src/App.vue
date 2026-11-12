@@ -1,0 +1,31 @@
+<script setup>
+import TheHeader from './components/TheHeader.vue'
+import TheFooter from './components/TheFooter.vue'
+</script>
+
+<template>
+  <div class="app">
+    <TheHeader />
+    <main>
+      <router-view />
+    </main>
+    <TheFooter />
+  </div>
+</template>
+
+<style>
+body {
+  margin: 0;
+  font-family: monospace;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+</style>
