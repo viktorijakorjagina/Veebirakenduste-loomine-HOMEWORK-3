@@ -5,6 +5,7 @@
 </template>
 
 <style scoped>
+/* Put the content in the middle of the page */
 .signup {
   display: flex;
   justify-content: center;
