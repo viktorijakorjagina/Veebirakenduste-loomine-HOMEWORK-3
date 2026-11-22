@@ -8,7 +8,9 @@ import { onMounted } from 'vue'
 const store= useStore()
 
 onMounted(() => {
-  store.dispatch('fetchPosts')
+  if (store.state.posts.length === 0) {
+    store.dispatch('fetchPosts')
+  }
 })
 
 </script>

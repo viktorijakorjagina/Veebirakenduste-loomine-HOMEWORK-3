@@ -42,8 +42,7 @@ export default {
   data() {
     return {
       email: '',
-      password: '',
-      submitted: false
+      password: ''
     }
   },
 
@@ -70,8 +69,6 @@ export default {
 
   methods: {
     signup() {
-      this.submitted = true
-      
       if (
         this.passwordLengthValid &&
         this.hasUppercase &&
