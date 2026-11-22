@@ -27,6 +27,7 @@ import TheFooter from './components/TheFooter.vue'
   --page-color: #f3f9fd;             /* background of the page */
   --text-color: black;             /* normal text */
   --button-text-color: white;  /* text on blue buttons */
+  --error-color: #b22222;              /* error messages */
 }
 
 /* Global styles for the whole app */

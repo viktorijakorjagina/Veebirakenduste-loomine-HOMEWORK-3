@@ -1,29 +1,32 @@
 <template>
   <div class="signup">
-    <form @submit.prevent="signup">
-      <h1>Signup</h1>
-      <label for="email">Email:</label>
-      <input type="email" id="email" v-model="email" required />
+    <form class="signup-form" @submit.prevent="signup">
+      <div class="form-row">
+        <label for="email">Email</label>
+        <input type="email" id="email" v-model="email" placeholder="Email" required />
+      </div>
 
-      <label for="password">Password:</label>
-      <input type="password" id="password" v-model="password" required />
+      <div class="form-row">
+        <label for="password">Password</label>
+        <input type="password" id="password" v-model="password" placeholder="Password" required />
+      </div>
 
-      <p v-if="password && !passwordLengthValid">
+      <p class="error" v-if="password && !passwordLengthValid">
         The password is not valid - It must contain 8 to 14 characters.
       </p>
-      <p v-if="password && !hasUppercase">
+      <p class="error" v-if="password && !hasUppercase">
         The password is not valid - It must include at least one uppercase letter.
       </p>
-      <p v-if="password && !hasTwoLowercase">
+      <p class="error" v-if="password && !hasTwoLowercase">
         The password is not valid - It must include at least two lowercase letters.
       </p>
-      <p v-if="password && !hasNumber">
+      <p class="error" v-if="password && !hasNumber">
         The password is not valid - It must include at least one numeric value.
       </p>
-      <p v-if="password && !startsWithUppercase">
+      <p class="error" v-if="password && !startsWithUppercase">
         The password is not valid - It must start with an uppercase letter.
       </p>
-      <p v-if="password && !hasUnderscore">
+      <p class="error" v-if="password && !hasUnderscore">
         The password is not valid - It must include the character “_”.
       </p>
 
@@ -87,10 +90,62 @@ export default {
 </script>
 
 <style scoped>
-/* Put the content in the middle of the page */
 .signup {
   display: flex;
   justify-content: center;
-  padding: 20px;
+  padding: 50px 20px;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 325px;
+  max-width: 100%;
+  padding: 30px;
+  border-radius: 12px;
+  background-color: var(--block-color);
+  box-sizing:border-box;
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+label {
+  width: 80px;
+  text-align: right;
+}
+
+input {
+  flex: 1;
+  min-width: 70px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 8px;
+  border-radius: 10px;
+  border: none;
+}
+
+button {
+  background-color: var(--main-color);
+  color: var(--button-text-color);
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.error {
+  color: var(--error-color);
+  font-size: 13px;
+  text-align: left;
+  margin: 5px 0;
 }
 </style>
