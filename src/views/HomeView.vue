@@ -43,18 +43,19 @@ onMounted(() => {
   justify-content: center;
   gap: 20px;
   padding: 20px;
+  margin: 0 auto;
 }
 
 /* Columns on the left and on the right */
 .sidebar {
   background-color: var(--block-color);
-  width: 150px;
+  flex: 1;
   border-radius: 12px;
 }
 
 /* The middle column with the posts */
 .feed {
-  width: 350px;
+  flex: 2;
 }
 
 /* On small screens (phones) we hide the side columns */
